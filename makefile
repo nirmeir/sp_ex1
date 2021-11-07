@@ -81,14 +81,16 @@ loopd: libclassloops.so
 libclassloops.a: basicClassification.o advancedClassificationLoop.o
 	$(AR) -rcs libclassloops.a basicClassification.o advancedClassificationLoop.o
 
+libclassloops.so: basicClassification.o advancedClassificationLoop.o
+	$(CC) -shared -o libclassloops.so basicClassification.o advancedClassificationLoop.o
+
 libclassrec.a: basicClassification.o advancedClassificationRecursion.o
 	$(AR) -rcs libclassrec.a basicClassification.o advancedClassificationRecursion.o
 
 libclassrec.so: basicClassification.o advancedClassificationRecursion.o
-	$(CC) -shared -fPIC -o libclassrec.so basicClassification.o advancedClassificationRecursion.o
+	$(CC) -shared -o libclassrec.so basicClassification.o advancedClassificationRecursion.o
 
-libclassloops.so: basicClassification.o advancedClassificationLoop.o
-	$(CC) -shared -fPIC -o libclassloops.so basicClassification.o advancedClassificationLoop.o
+
 
 mains: main.o libclassrec.a 
 	$(CC) $(FLAGS) -o mains main.o libclassrec.a -lm
