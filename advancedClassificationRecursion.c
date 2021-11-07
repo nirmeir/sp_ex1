@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "NumClass.h"
 #include <math.h>
+int rev(int,int);
+int Rec(int,int,int);
+
 
 int rev(int n, int temp)
 {

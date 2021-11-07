@@ -1,20 +1,7 @@
 #include <stdio.h>
 #include "NumClass.h"
 #include <math.h>
-
-int factorial(int n)
-{
-    if (n <= 0)
-    {
-        return 0;
-    }
-    int fact = 1;
-    for (int i = 1; i <= n; i++)
-    {
-        fact = fact * i;
-    }
-    return fact;
-}
+int factorial(int);
 
 
 int isPrime(int num3){
@@ -38,8 +25,6 @@ int isPrime(int num3){
         return 1;
 }
 
-
-
 int isStrong(int num)
 {
     if (num == 0) {
@@ -60,4 +45,22 @@ int isStrong(int num)
     }
     return 0;
 }
+
+int factorial(int n)
+{
+    if (n <= 0)
+    {
+        return 0;
+    }
+    int fact = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        fact = fact * i;
+    }
+    return fact;
+}
+
+
+
+
 
