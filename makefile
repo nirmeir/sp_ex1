@@ -48,7 +48,7 @@ maindrec: main.o libclassrec.so
 
 
 
-.PHONY: clean all loopd loops recursived recursives
+# .PHONY: clean all loopd loops recursived recursives
 
 clean:
 	rm -f *.o *.a *.so mains maindrec maindloop
