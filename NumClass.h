@@ -1,5 +1,5 @@
 #ifndef NumClass
-#define NumClass
+    #define NumClass
 
 int isArmstrong(int num2);
 int isPalindrome(int num2);
