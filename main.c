@@ -1,7 +1,7 @@
 #include "numClass.h"
 #include <stdio.h>
 
-int main(){
+int main()
 {
 
     int a, b;
@@ -60,7 +60,7 @@ int main(){
 
     }
     printf("\n");
-   
 
-    return 0;
-}
+     return 0;
+
+    }
