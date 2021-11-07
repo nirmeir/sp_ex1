@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "numClass.h"
+#include "NumClass.h"
 #include <math.h>
 int Rec (int,int,int);
 int rev (int,int);

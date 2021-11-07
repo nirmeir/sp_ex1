@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "numClass.h"
+#include "NumClass.h"
 #include <math.h>
 
 int isPalindrome(int num)
