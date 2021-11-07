@@ -1,8 +1,17 @@
 #include <stdio.h>
 #include "NumClass.h"
 #include <math.h>
-int Rec (int,int,int);
-int rev (int,int);
+
+int rev(int n, int temp)
+{
+    if (n == 0)
+        return temp;
+ 
+    temp = (temp * 10) + (n % 10);
+ 
+    return rev(n / 10, temp);
+}
+ 
 
 int Rec (int num ,int counter , int sum){
 
@@ -37,17 +46,6 @@ return 0;
 }
 
 
-
-int rev(int n, int temp)
-{
-    if (n == 0)
-        return temp;
- 
-    temp = (temp * 10) + (n % 10);
- 
-    return rev(n / 10, temp);
-}
- 
 int isPalindrome(int num){
 
  int temp = 0;

@@ -25,7 +25,7 @@ int isArmstrong(int num){
 int counter =0;
 int temp1 =num;
 int temp2 =num;
-// int temp3 =0; 
+
 int sum =0;
 
 while (temp1 != 0){
