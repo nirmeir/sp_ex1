@@ -17,21 +17,9 @@ loops: libclassloops.a
 
 recursives: libclassrec.a 
 
-recursived: libclassrec.so
-
 loopd: libclassloops.so	
 
-main.o: main.c NumClass.h
-	$(CC) $(FLAGS) -c main.c 
-
-basicClassification.o: basicClassification.c 
-	$(CC) $(FLAGS) -c basicClassification.c 
-	
-advancedClassificationLoop.o: advancedClassificationLoop.c 
-	$(CC) $(FLAGS) -c advancedClassificationLoop.c 
-
-advancedClassificationRecursion.o: advancedClassificationRecursion.c 
-	$(CC) $(FLAGS) -c advancedClassificationRecursion.c 
+recursived: libclassrec.so
 
 libclassloops.a: basicClassification.o advancedClassificationLoop.o
 	$(AR) -rcs libclassloops.a basicClassification.o advancedClassificationLoop.o
@@ -45,11 +33,17 @@ libclassrec.a: basicClassification.o advancedClassificationRecursion.o
 libclassrec.so: basicClassification.o advancedClassificationRecursion.o
 	$(CC) -shared -o libclassrec.so basicClassification.o advancedClassificationRecursion.o
 
+main.o: main.c NumClass.h
+	$(CC) $(FLAGS) -c main.c 
 
+basicClassification.o: basicClassification.c 
+	$(CC) $(FLAGS) -c basicClassification.c 
+	
+advancedClassificationLoop.o: advancedClassificationLoop.c 
+	$(CC) $(FLAGS) -c advancedClassificationLoop.c 
 
-
-
-
+advancedClassificationRecursion.o: advancedClassificationRecursion.c 
+	$(CC) $(FLAGS) -c advancedClassificationRecursion.c 
 
 .PHONY: clean all loopd loops recursived recursives
 
